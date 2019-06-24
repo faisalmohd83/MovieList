@@ -1,4 +1,4 @@
-[![Codemagic build status](https://api.codemagic.io/apps/5d0f5fc199fdb7001aa4da78/5d0f5fc199fdb7001aa4da77/status_badge.svg)](https://codemagic.io/apps/5d0f5fc199fdb7001aa4da78/5d0f5fc199fdb7001aa4da77/latest_build)
+[![Codemagic build status](https://api.codemagic.io/apps/5d0f5fc199fdb7001aa4da78/5d0f5fc199fdb7001aa4da77/status_badge.svg)](https://codemagic.io/apps/5d0f5fc199fdb7001aa4da78/5d0f5fc199fdb7001aa4da77/latest_build) [![codecov](https://codecov.io/gh/faisalmohd83/MovieList/branch/master/graph/badge.svg)](https://codecov.io/gh/faisalmohd83/MovieList)
 
 # MovieList
 
