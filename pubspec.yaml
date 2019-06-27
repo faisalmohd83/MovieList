@@ -1,4 +1,4 @@
-name: movie_list
+name: MovieDirect
 description: A showcase sampling to list Movies from TMDB
 
 # The following defines the version and build number for your application.
@@ -23,11 +23,11 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
+  http:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
