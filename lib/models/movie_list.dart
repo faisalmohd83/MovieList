@@ -1,4 +1,4 @@
-import 'package:MovieDirect/data/MovieItem.dart';
+import 'package:MovieDirect/models/movie_item.dart';
 
 class MoviesList {
   List<MovieItem> results;
