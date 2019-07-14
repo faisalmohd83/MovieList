@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:MovieDirect/models/movie_list.dart';
+import 'package:MovieDirect/utils/file_reader.dart';
 import 'package:firebase_performance/firebase_performance.dart';
 import 'package:http/http.dart' show Client, Response;
 
@@ -18,6 +19,9 @@ class MovieApiProvider {
     final Trace _firebaseTrackerMovieListFetch =
         FirebasePerformance.instance.newTrace("getMoviesNowPlaying");
     _firebaseTrackerMovieListFetch.start();
+
+    // The API key for The Movie Database (TMDb).
+    // var _apiKey = await loadAsset();
 
     var url = _baseUrl + _apiKey;
     print('url: $url');

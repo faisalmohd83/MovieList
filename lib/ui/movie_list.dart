@@ -25,13 +25,33 @@ class MovieListUIState extends State<MovieListUI> {
     // -----
     return Scaffold(
       appBar: AppBar(
-        title: Text("Movie List"),
+        elevation: 0.3,
+        centerTitle: true,
+        backgroundColor: Colors.blueGrey,
+        title: new Text(
+          'Latest Movies',
+          style: new TextStyle(
+              color: Colors.amberAccent,
+              fontFamily: 'Arvo',
+              fontWeight: FontWeight.bold),
+        ),
+        actions: <Widget>[
+          new Icon(
+            Icons.search,
+            color: Colors.amberAccent,
+          )
+        ],
       ),
       body: StreamBuilder(
           stream: bloc.allMovies,
           builder: (context, snapshot) {
             print(snapshot);
-            return prepareListView(snapshot);
+            if (snapshot.hasData) {
+              return prepareListView(snapshot);
+            } else if (snapshot.hasError) {
+              return Text(snapshot.error.toString());
+            }
+            return Center(child: CircularProgressIndicator());
             /* switch (snapshot.connectionState) {
                   case ConnectionState.none:
                     return Center(child: Text('Press button to start.'));

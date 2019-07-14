@@ -5,5 +5,5 @@ import 'package:flutter/widgets.dart';
 
 void main() {
   Crashlytics.instance.enableInDevMode = true;
-  runApp(MyApp());
+  runApp(MyMovieApp());
 }
