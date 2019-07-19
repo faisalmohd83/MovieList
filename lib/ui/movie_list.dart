@@ -28,13 +28,7 @@ class MovieListUIState extends State<MovieListUI> {
         elevation: 0.3,
         centerTitle: true,
         backgroundColor: Colors.blueGrey,
-        title: new Text(
-          'Latest Movies',
-          style: new TextStyle(
-              color: Colors.amberAccent,
-              fontFamily: 'Arvo',
-              fontWeight: FontWeight.bold),
-        ),
+        title: new AppBarTitleWidget(),
         actions: <Widget>[
           new Icon(
             Icons.search,
@@ -92,7 +86,25 @@ class MovieListUIState extends State<MovieListUI> {
           );
         },
         separatorBuilder: (context, index) {
-          return new Divider(indent: 1.0, endIndent: 1.0, color: Colors.cyan);
+          return new Divider(
+              indent: 1.0, endIndent: 1.0, color: Colors.amberAccent);
         });
+  }
+}
+
+class AppBarTitleWidget extends StatelessWidget {
+  const AppBarTitleWidget({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return new Text(
+      'Latest Movies',
+      style: new TextStyle(
+          color: Colors.amberAccent,
+          fontFamily: 'Arvo',
+          fontWeight: FontWeight.bold),
+    );
   }
 }

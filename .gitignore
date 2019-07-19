@@ -1,3 +1,6 @@
+# Created by https://www.gitignore.io/api/code,flutter
+# Edit at https://www.gitignore.io/?templates=code,flutter
+
 # Miscellaneous
 *.class
 *.lock
@@ -16,9 +19,14 @@
 *.iws
 .idea/
 
-# Visual Studio Code related
-.vscode/
+### Code ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
+### Flutter ###
 # Flutter repo-specific
 /bin/cache/
 /bin/mingit/
@@ -95,3 +103,5 @@ coverage/
 !**/ios/**/default.pbxuser
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+
+# End of https://www.gitignore.io/api/code,flutter
