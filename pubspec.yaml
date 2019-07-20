@@ -1,4 +1,4 @@
-name: movie_list
+name: MovieDirect
 description: A showcase sampling to list Movies from TMDB
 
 # The following defines the version and build number for your application.
@@ -11,7 +11,7 @@ description: A showcase sampling to list Movies from TMDB
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.0.0+1
+version: 1.1.0+1
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
@@ -19,15 +19,17 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
+  rxdart:
+  http:
+  firebase_core:
+  firebase_analytics:
+  firebase_crashlytics:
+  firebase_performance:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
@@ -41,9 +43,9 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #  - images/a_dot_burr.jpeg
-  #  - images/a_dot_ham.jpeg
+  assets:
+    - assets/api_secret.txt
+    # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
