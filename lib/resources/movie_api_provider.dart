@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
+
 import 'package:MovieDirect/models/movie_list.dart';
-import 'package:MovieDirect/utils/file_reader.dart';
 import 'package:firebase_performance/firebase_performance.dart';
 import 'package:http/http.dart' show Client, Response;
 
@@ -25,7 +25,7 @@ class MovieApiProvider {
 
     var url = _baseUrl + _apiKey;
     print('url: $url');
-    Response response = await client.get(url);
+    Response response = await client.get(Uri.dataFromString(url));
 
     _firebaseTrackerMovieListFetch.stop();
 

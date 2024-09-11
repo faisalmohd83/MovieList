@@ -1,6 +1,5 @@
 import 'package:MovieDirect/blocs/movies_bloc.dart';
 import 'package:MovieDirect/models/movie_list.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MovieListUI extends StatefulWidget {
@@ -28,7 +27,7 @@ class MovieListUIState extends State<MovieListUI> {
         elevation: 0.3,
         centerTitle: true,
         backgroundColor: Colors.blueGrey,
-        title: new AppBarTitleWidget(),
+        title: new AppBarTitleWidget(key: Key('AppBarTitleWidget')),
         actions: <Widget>[
           new Icon(
             Icons.search,
@@ -65,23 +64,29 @@ class MovieListUIState extends State<MovieListUI> {
   }
 
   Widget prepareListView(AsyncSnapshot<MoviesList> snapshot) {
+    var movieListResult = snapshot.data?.results;
+    if (movieListResult == null || movieListResult.length == 0) {
+      return Center(
+        child: Text('No data found'),
+      );
+    }
     return ListView.separated(
         padding: EdgeInsets.zero,
-        itemCount: snapshot.data.results.length,
+        itemCount: movieListResult.length,
         itemBuilder: (context, index) {
           return ListTile(
             leading: CircleAvatar(
               backgroundImage: NetworkImage(
-                  'https://image.tmdb.org/t/p/w185${snapshot.data.results[index].posterPath}'),
+                  'https://image.tmdb.org/t/p/w185${movieListResult[index].posterPath}'),
             ),
-            title: Text(snapshot.data.results[index].title),
+            title: Text(movieListResult[index].title),
             subtitle: Text(
-              snapshot.data.results[index].popularity.toString(),
+              movieListResult[index].popularity.toString(),
               maxLines: 1,
               softWrap: true,
             ),
             onTap: () {
-              print(snapshot.data.results[index].originalTitle);
+              print(movieListResult[index].originalTitle);
             },
           );
         },
@@ -94,7 +99,7 @@ class MovieListUIState extends State<MovieListUI> {
 
 class AppBarTitleWidget extends StatelessWidget {
   const AppBarTitleWidget({
-    Key key,
+    required Key key,
   }) : super(key: key);
 
   @override

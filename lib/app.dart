@@ -5,8 +5,8 @@ class MyMovieApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'My Http App',
-      theme: ThemeData.dark(),
+      title: "My Http App",
+      theme: ThemeData.fallback(),
       home: MovieListUI(),
     );
   }

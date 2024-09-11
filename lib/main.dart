@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 void main() {
-  Crashlytics.instance.enableInDevMode = true;
+  WidgetsFlutterBinding.ensureInitialized(); // Add this line
+  FirebaseCrashlytics.instance.setCrashlyticsCollectionEnabled(true); // Add this line
   runApp(MyMovieApp());
 }

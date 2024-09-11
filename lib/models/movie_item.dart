@@ -14,38 +14,38 @@ class MovieItem {
   String overview;
   String releaseDate;
 
-  MovieItem(
-      {this.voteCount,
-      this.id,
-      this.video,
-      this.voteAverage,
-      this.title,
-      this.popularity,
-      this.posterPath,
-      this.originalLanguage,
-      this.originalTitle,
-      this.genreIds,
-      this.backdropPath,
-      this.adult,
-      this.overview,
-      this.releaseDate});
+  MovieItem({
+    required this.voteCount,
+    required this.id,
+    required this.video,
+    required this.voteAverage,
+    required this.title,
+    required this.popularity,
+    required this.posterPath,
+    required this.originalLanguage,
+    required this.originalTitle,
+    required this.genreIds,
+    required this.backdropPath,
+    required this.adult,
+    required this.overview,
+    required this.releaseDate,
+  });
 
-  MovieItem.fromJson(Map<String, dynamic> json) {
-    voteCount = json['vote_count'];
-    id = json['id'];
-    video = json['video'];
-    voteAverage = json['vote_average'].toDouble();
-    title = json['title'];
-    popularity = json['popularity'];
-    posterPath = json['poster_path'];
-    originalLanguage = json['original_language'];
-    originalTitle = json['original_title'];
-    genreIds = json['genre_ids'].cast<int>();
-    backdropPath = json['backdrop_path'];
-    adult = json['adult'];
-    overview = json['overview'];
-    releaseDate = json['release_date'];
-  }
+  MovieItem.fromJson(Map<String, dynamic> json)
+      : voteCount = json['vote_count'],
+        id = json['id'],
+        video = json['video'],
+        voteAverage = json['vote_average'].toDouble(),
+        title = json['title'],
+        popularity = json['popularity'],
+        posterPath = json['poster_path'],
+        originalLanguage = json['original_language'],
+        originalTitle = json['original_title'],
+        genreIds = json['genre_ids'].cast<int>(),
+        backdropPath = json['backdrop_path'],
+        adult = json['adult'],
+        overview = json['overview'],
+        releaseDate = json['release_date'];
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();

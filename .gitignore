@@ -12,7 +12,6 @@
 .vscode/
 .cocoapods/
 .flutter-plugins-dependencies
-.fvm/flutter_sdk/
 
 # iOS related files
 ios/Flutter/.last_build_id
@@ -78,3 +77,6 @@ linux/.packages
 *.tmp
 *.swp
 *.lock
+
+# FVM Version Cache
+.fvm/
