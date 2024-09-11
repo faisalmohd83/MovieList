@@ -1,107 +1,80 @@
-# Created by https://www.gitignore.io/api/code,flutter
-# Edit at https://www.gitignore.io/?templates=code,flutter
-
-# Miscellaneous
-*.class
-*.lock
-*.log
-*.pyc
-*.swp
-.DS_Store
-.atom/
-.buildlog/
-.history
-.svn/
-
-# IntelliJ related
-*.iml
-*.ipr
-*.iws
-.idea/
-
-### Code ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-
-### Flutter ###
-# Flutter repo-specific
-/bin/cache/
-/bin/mingit/
-/dev/benchmarks/mega_gallery/
-/dev/bots/.recipe_deps
-/dev/bots/android_tools/
-/dev/docs/doc/
-/dev/docs/flutter.docs.zip
-/dev/docs/lib/
-/dev/docs/pubspec.yaml
-/packages/flutter/coverage/
-version
-macos
-
-# packages file containing multi-root paths
-.packages.generated
-
-# Flutter/Dart/Pub related
-**/doc/api/
+# Flutter/Dart related files
+**/build/
 .dart_tool/
 .flutter-plugins
+.flutter-plugins-dependencies
 .packages
 .pub-cache/
 .pub/
-build/
-flutter_*.png
-linked_*.ds
-unlinked.ds
-unlinked_spec.ds
+.idea/
+.macos/
+.windows/
+.vscode/
+.cocoapods/
+.flutter-plugins-dependencies
+.fvm/flutter_sdk/
 
-# Android related
-**/android/**/gradle-wrapper.jar
-**/android/.gradle
-**/android/captures/
-**/android/gradlew
-**/android/gradlew.bat
-**/android/local.properties
-**/android/**/GeneratedPluginRegistrant.java
-**/android/key.properties
-*.jks
+# iOS related files
+ios/Flutter/.last_build_id
+ios/Pods/
+ios/Runner.xcworkspace/
+ios/Flutter/Flutter.framework/
+ios/Flutter/App.framework/
+ios/Flutter/Flutter.podspec
+ios/Flutter/Debug.xcconfig
+ios/Flutter/Release.xcconfig
+ios/Flutter/Generated.xcconfig
+ios/Flutter/GeneratedPluginRegistrant.*
+ios/.symlinks/
 
-# iOS/XCode related
-**/ios/**/*.mode1v3
-**/ios/**/*.mode2v3
-**/ios/**/*.moved-aside
-**/ios/**/*.pbxuser
-**/ios/**/*.perspectivev3
-**/ios/**/*sync/
-**/ios/**/.sconsign.dblite
-**/ios/**/.tags*
-**/ios/**/.vagrant/
-**/ios/**/DerivedData/
-**/ios/**/Icon?
-**/ios/**/Pods/
-**/ios/**/.symlinks/
-**/ios/**/profile
-**/ios/**/xcuserdata
-**/ios/.generated/
-**/ios/Flutter/App.framework
-**/ios/Flutter/Flutter.framework
-**/ios/Flutter/Generated.xcconfig
-**/ios/Flutter/app.flx
-**/ios/Flutter/app.zip
-**/ios/Flutter/flutter_assets/
-**/ios/ServiceDefinitions.json
-**/ios/Runner/GeneratedPluginRegistrant.*
+# Android related files
+android/.gradle/
+android/app/build/
+android/app/*.iml
+android/app/.settings/
+android/app/.gradle/
+android/local.properties
+android/.idea/
+android/.settings/
 
-# Coverage
-coverage/
+# Generated Localization files
+lib/l10n/*.arb
 
-# Exceptions to above rules.
-!**/ios/**/default.mode1v3
-!**/ios/**/default.mode2v3
-!**/ios/**/default.pbxuser
-!**/ios/**/default.perspectivev3
-!/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+# IntelliJ related files
+*.iml
+.idea/
+*.ipr
+*.iws
+*.iml
 
-# End of https://www.gitignore.io/api/code,flutter
+# VS Code related files
+.vscode/
+
+# macOS related files
+macos/Flutter/ephemeral/
+macos/Flutter/Flutter.podspec
+macos/Flutter/GeneratedPluginRegistrant.*
+
+# Web related files
+web/.dart_tool/
+web/.idea/
+web/.pub-cache/
+web/.dart_tool/
+web/.packages
+
+# Windows related files
+windows/Flutter/ephemeral/
+windows/.dart_tool/
+windows/.packages
+
+# Linux related files
+linux/Flutter/ephemeral/
+linux/.dart_tool/
+linux/.packages
+
+# Other files
+.DS_Store
+*.log
+*.tmp
+*.swp
+*.lock
